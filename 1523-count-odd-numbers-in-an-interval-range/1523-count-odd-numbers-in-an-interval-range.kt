@@ -6,10 +6,10 @@ class Solution {
         if((high - low + 1)%2 == 0) oddCounter = (high - low + 1)/2;
         //else if the difference between high and low is odd then there are two cases.
         //case 1:
-        //if low is odd => odds are greater than evens by 1. 
+        //if both low and high are evens then the (high - low + 1)/2 is double and the solution is the integer part of this computation.
         else if(low%2 == 0 && high%2 == 0) oddCounter = ((high - low + 1)/2) as Int;
         //case 2:
-        //if low is even => evens are greater than odds by 1
+        //if both low and high are odds then the (high - low + 1)/2 is double and the solution is the integer part of this computation + 1.
         else {
             oddCounter = ((high-low + 1)/2) as Int + 1;
         }
